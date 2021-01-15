@@ -17,7 +17,9 @@ for rain_total_month in rain_seattle_month: #Percentages for each month
     percentage_monthly_to_yearly=(rain_total_month/rain_seattle_year)*100
     percentage_all.append(round(percentage_monthly_to_yearly, 2)) #This step is not strictly necessary, but to have a list of all the percentages in one. I am also rounding 
     #the values so it is less of a hassle to look at them
-print(percentage_all)
+print(rain_seattle_month)
+print(rain_seattle_year)
+print(percentage_all) #To see all the results in the console.
 with open ('precipitation_Seattle.json', 'w') as json_file:
     json_file.write('This is the total percipitation for each month \n')
     json.dump(rain_seattle_month, json_file, indent=1)
